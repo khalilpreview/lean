@@ -1,0 +1,23 @@
+version: "3"
+
+services:
+  lean_db:
+    container_name: lean_db
+    image: postgres
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    restart: always
+    volumes:
+      - ./postgres:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - lean-network
+
+networks:
+   default:
+       driver: bridge
+   lean-network:
+       external: true

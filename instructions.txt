@@ -1,0 +1,12 @@
+
+- install Dokcer https://docs.docker.com/compose/install/
+- Django and Docker-compose https://docs.docker.com/compose/django/
+- Networking in Dokcer-compose https://docs.docker.com/compose/networking/
+
+create docker network bridge to connect db to lean app "docker network create lean-network"
+- docker-compose build
+- docker-compose up
+- docker exec -it lean_db /bin/bash
+- docker exec -it lean /bin/bash
+
+

@@ -1,0 +1,23 @@
+version: "3"
+
+services:
+  lean:
+    container_name: lean
+    build: .
+    command: >
+      
+    
+    stdin_open: true
+    tty: true
+    volumes:
+      - .:/code
+    ports:
+      - "0.0.0.0:8000:8000"
+    networks:
+      - lean-network
+
+networks:
+  default:
+    driver: bridge
+  lean-network:
+    external: true
